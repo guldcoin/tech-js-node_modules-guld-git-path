@@ -24,20 +24,6 @@ getGitDir().then(console.log)
 ##### Node
 
 ```
-const { getGitDir } = require('guld-git-path')
-```
-
-##### CLI
-
-```
-  Usage: guld-git-path [options]
-
-  Guld tool for getting the git directory of a path.
-
-  Options:
-
-    -V, --version   output the version number
-    -p, --path <p>  The path to check
-    -h, --help      output usage information
+const { getGitDir, pathEscape } = require('guld-git-path')
 ```
 
