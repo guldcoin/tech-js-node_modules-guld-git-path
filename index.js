@@ -18,7 +18,7 @@ async function getGitDir (p) {
   try {
     var dl = await fs.stat(gp)
   } catch (e) {
-    if (e.code && e.code === 'ENOENT') return getGitDir(path.dirname(p))
+    if (e.code && (e.code === 'ENOENT' || e.code === 'ENOTDIR')) return getGitDir(path.dirname(p))
     else throw e
   }
   if (dl.isDirectory()) return gp
