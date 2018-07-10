@@ -1,4 +1,4 @@
-/* global describe:false it:false */
+/* eslint-env node, mocha */
 const path = require('path')
 const assert = require('chai').assert
 const { getGitDir } = require('./index.js')
