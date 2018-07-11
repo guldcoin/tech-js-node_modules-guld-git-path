@@ -16,7 +16,7 @@
   "author": "isysd",
   "license": "MIT",
   "dependencies": {
-    "guld-fs": "^1.2.11",
+    "guld-fs": "^1.2.12",
     "user-home": "^2.0.0"
   },
   "devDependencies": {
