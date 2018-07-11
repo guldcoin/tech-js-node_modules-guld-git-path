@@ -1,6 +1,6 @@
 {
   "name": "guld-git-path",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Guld tool for getting the git directory of a path, or converting local paths into git-friendly repo names.",
   "main": "index.js",
   "scripts": {
@@ -16,7 +16,7 @@
   "author": "isysd",
   "license": "MIT",
   "dependencies": {
-    "guld-fs": "^1.2.8",
+    "guld-fs": "^1.2.9",
     "user-home": "^2.0.0"
   },
   "devDependencies": {
