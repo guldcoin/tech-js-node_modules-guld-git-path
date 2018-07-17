@@ -32,7 +32,7 @@ function pathEscape (p) {
   if (p.startsWith(home)) p = p.slice(home.length + 1)
   else throw new RangeError(`path ${p} is not in the blocktree`)
   if (p.startsWith('.')) p = `_${p.slice(1)}`
-  return p.replace(/\//g, '-')
+  return p.replace(/\//g, '-').toLowerCase()
 }
 
 module.exports = {
