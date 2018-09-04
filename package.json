@@ -6,12 +6,14 @@
   "scripts": {
     "test": "./node_modules/mocha/bin/_mocha",
     "lint": "eslint --env browser *.js*",
-    "fix": "eslint --fix *.js*"
+    "fix": "eslint --fix *.js*",
+    "test:lint": "npm run lint && npm run test"
   },
   "keywords": [
     "guld",
     "cli",
-    "git"
+    "git",
+    "node"
   ],
   "author": "isysd",
   "license": "MIT",
@@ -40,6 +42,6 @@
   "engines": {
     "node": ">=7"
   },
-  "homepage": "https://bitbucket.org/isysd/tech-js-node_modules-guld-git-path#readme",
-  "repository": "git@bitbucket.org:isysd/tech-js-node_modules-guld-git-path.git"
+  "homepage": "https://guld.tech/lib/guld-git-path.html",
+  "repository": "https://bitbucket.org/guld/tech-js-node_modules-guld-git-path"
 }
