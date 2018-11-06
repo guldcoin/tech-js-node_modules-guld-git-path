@@ -24,13 +24,21 @@ async function getGitDir (p) {
   if (dl.isDirectory()) return gp
 }
 
-function pathEscape (p) {
+function pathTree (p) {
   p = p || getDefaultPath()
-  p = path.resolve(p)
-  if (p === '/home') return '_blocktree'
+  if (p === '/home') return 'blocktree'
   if (p === home) return 'perspective'
   if (p.startsWith(home)) p = p.slice(home.length + 1)
-  else throw new RangeError(`path ${p} is not in the blocktree`)
+  else {
+    p = path.resolve(p)
+    if (p.startsWith(home)) p = p.slice(home.length + 1)
+    else throw new RangeError(`path ${p} is not in the blocktree`)
+  }
+  return p
+}
+
+function pathEscape (p) {
+  p = pathTree(p)
   if (p.startsWith('.')) p = `_${p.slice(1)}`
   return p.replace(/\//g, '-').toLowerCase()
 }
@@ -38,5 +46,6 @@ function pathEscape (p) {
 module.exports = {
   getDefaultPath: getDefaultPath,
   getGitDir: getGitDir,
+  pathTree: pathTree,
   pathEscape: pathEscape
 }
